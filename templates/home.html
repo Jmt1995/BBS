@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="/static/home/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/home/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="/static/home/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/static/home/css/admin.css">
+    <link rel="stylesheet" href="/static/home/css/app.css">
+    <script src="/static/home/js/echarts.min.js"></script>
+
+    <link href="/static/article/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+    <link href="/static/article/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="/static/article/css/style.css" rel="stylesheet" />
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+</head>
+
+<body data-type="index">
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="/static/home/img/logo2.png" alt="">
+
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="am-icon-bell-o"></span> 提醒 <span class="am-badge tpl-badge-success am-round">0</span></span>
+                    </a>
+                    <ul class="am-dropdown-content tpl-dropdown-content">
+                        <li class="tpl-dropdown-content-external">
+                            <h3>你有 <span class="tpl-color-success">0</span> 条提醒</h3><a href="###">全部</a></li>
+                       <!-- <li class="tpl-dropdown-list-bdbc"><a href="#" class="tpl-dropdown-list-fl"><span class="am-icon-btn am-icon-plus tpl-dropdown-ico-btn-size tpl-badge-success"></span> 【预览模块】移动端 查看时 手机、电脑框隐藏。</a>
+                            <span class="tpl-dropdown-list-fr">3小时前</span>
+                        </li>-->
+
+                    </ul>
+                </li>
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="am-icon-comment-o"></span> 消息 <span class="am-badge tpl-badge-danger am-round">0</span></span>
+                    </a>
+                    <ul class="am-dropdown-content tpl-dropdown-content">
+                        <li class="tpl-dropdown-content-external">
+                            <h3>你有 <span class="tpl-color-danger">0</span> 条新消息</h3><a href="##">全部</a>
+                        </li>
+
+                        <li>
+                          <!--  <a href="#" class="tpl-dropdown-content-message">
+                                <span class="tpl-dropdown-content-photo">
+                      <img src="/static/home/img/user02.png" alt=""> </span>
+                                <span class="tpl-dropdown-content-subject">
+                      <span class="tpl-dropdown-content-from"> {{ userName }} </span>
+
+                                <span class="tpl-dropdown-content-time">10分钟前 </span>
+                                </span>
+
+                                <span class="tpl-dropdown-content-font"> Amaze UI 的诞生，依托于 GitHub 及其他技术社区上一些优秀的资源；Amaze UI 的成长，则离不开用户的支持。 </span>
+                            </a>-->
+
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="am-icon-calendar"></span> 进度 <span class="am-badge tpl-badge-primary am-round">0</span></span>
+                    </a>
+                    <ul class="am-dropdown-content tpl-dropdown-content">
+                        <li class="tpl-dropdown-content-external">
+                            <h3>你有 <span class="tpl-color-primary">0</span> 个任务进度</h3><a href="###">全部</a></li>
+                     <!--   <li>
+                            <a href="javascript:;" class="tpl-dropdown-content-progress">
+                                <span class="task">
+                        <span class="desc">Amaze UI 用户中心 v1.2 </span>
+                                <span class="percent">45%</span>
+                                </span>
+                                <span class="progress">
+                        <div class="am-progress tpl-progress am-progress-striped"><div class="am-progress-bar am-progress-bar-success" style="width:45%"></div></div>
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="tpl-dropdown-content-progress">
+                                <span class="task">
+                        <span class="desc">新闻内容页 </span>
+                                <span class="percent">30%</span>
+                                </span>
+                                <span class="progress">
+                       <div class="am-progress tpl-progress am-progress-striped"><div class="am-progress-bar am-progress-bar-secondary" style="width:30%"></div></div>
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="tpl-dropdown-content-progress">
+                                <span class="task">
+                        <span class="desc">管理中心 </span>
+                                <span class="percent">60%</span>
+                                </span>
+                                <span class="progress">
+                        <div class="am-progress tpl-progress am-progress-striped"><div class="am-progress-bar am-progress-bar-warning" style="width:60%"></div></div>
+                    </span>
+                            </a>
+                        </li>-->
+
+                    </ul>
+                </li>
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick">{{ userName }}</span><span class="tpl-header-list-user-ico"> <img src="{{ photo }}"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="changeinfo.html"><span class="am-icon-bell-o"></span> 资料</a></li>
+                        <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+                        <li><a href="/BBS/logout/"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="/BBS/logout/" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+                BBS 目录
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="/BBS/home" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>文章</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+
+
+                                <a href="/BBS/articleedit">
+                                    <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>写文章</span>
+                                </a>
+
+                                <a href="/BBS/myarticles">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>我的文章</span>
+
+                                </a>
+                                <a href="/BBS/myarticlecmmts">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>最近评论</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="/BBS/changeinfo" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-key"></i>
+                            <span>个人资料</span>
+
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="/BBS/login/" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-key"></i>
+                            <span>登录</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                主页
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="/BBS/home" class="am-icon-home">首页</a></li>
+                <li class="am-active">内容</li>
+            </ol>
+            <div class="tpl-content-scope">
+                <div class="note note-info">
+                    <h3>BBS 论坛系统，知道更多事
+                        <span class="close" data-close="note"></span>
+                    </h3>
+                    <p> 更加快速的融入互联网、快速便捷的了解当下自己所关注发生的事情。
+                         <a href="/BBS/index/" target="_blank" title="更多">更多</a>
+                    </p>
+
+                    <p><span class="label label-danger">提示:</span> BBS有你想知道的各种事情
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat blue">
+                        <div class="visual">
+                            <i class="am-icon-comments-o"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 1349 </div>
+                            <div class="desc"> 科技 </div>
+                        </div>
+                        <a class="more" href="/BBS/index"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat red">
+                        <div class="visual">
+                            <i class="am-icon-bar-chart-o"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 62 </div>
+                            <div class="desc"> 生活 </div>
+                        </div>
+                        <a class="more" href="/BBS/index"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat green">
+                        <div class="visual">
+                            <i class="am-icon-apple"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 653 </div>
+                            <div class="desc"> 宅 </div>
+                        </div>
+                        <a class="more" href="/BBS/index"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat purple">
+                        <div class="visual">
+                            <i class="am-icon-android"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 786 </div>
+                            <div class="desc"> ？？ </div>
+                        </div>
+                        <a class="more" href="/BBS/index"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+
+            </div>
+
+            <div class="row">
+                <div class="tpl-content-scope">
+
+                    <div class="tpl-portlet">
+                        <div class="tpl-portlet-title">
+                            <div class="tpl-caption font-green ">
+                                <span>文章广场</span>
+                                <span class="caption-helper"><!--总量 --></span>
+                            </div>
+                            <div class="tpl-portlet-input">
+                                <div class="portlet-input input-small input-inline">
+                                    <div class="input-icon right">
+                                        <i class="am-icon-search"  ></i>
+                                        <input type="text" name="keyword" id="keyword" class="form-control form-control-solid"  placeholder="搜索文章..." onkeydown="entersearch()"  > </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wrapper" class="wrapper">
+                            <div id="scroller" class="scroller">
+                                <ul class="tpl-task-list tpl-task-remind">
+
+                                      {% for article in articles  %}
+                                                <li>
+                                                    <div class="cosB">
+                                                       {{ article.article_time }}-{{ article.article_date }}
+                                                    </div>
+                                                    <div class="cosA">
+
+                                                        <span>
+                                                            <div>
+                                                                <span class="label label-info">标题</span>{{ article.name }}
+
+                                                                 </div>
+
+                                                                 <div>
+                                                                <a href="/BBS/chat?receiver={{ article.receiver }}" class="label label-warning">作者 </a>{{ article.article_author_name  }}
+                                                                </div>
+
+                                                                    <div>
+                                                                     {{ article.article_info }}
+                                                                 </div>
+                                                            <span >
+                                                                <a href="/BBS/singlearticle?nid={{ article.id }}" class="label label-success">
+                                                                    更多 <i class="fa fa-forward"></i>
+                                                                </a>
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                                </li>
+                                                {% endfor %}
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+             <!--   <div class="am-u-md-6 am-u-sm-12 row-mb">
+                    <div class="tpl-portlet">
+                        <div class="tpl-portlet-title">
+                            <div class="tpl-caption font-green ">
+                                <span>文章广场</span>
+                            </div>
+
+                        </div>
+
+                        <div class="am-tabs tpl-index-tabs" data-am-tabs>
+                            <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                <li class="am-active"><a href="#tab1">目前</a></li>
+                                <li><a href="#tab2">已发布</a></li>
+                            </ul>
+
+                            <div class="am-tabs-bd">
+                                <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                    <div id="wrapperA" class="wrapper">
+                                        <div id="scroller" class="scroller">
+                                            <ul class="tpl-task-list tpl-task-remind">
+
+                                                {% for article in articles  %}
+                                                <li>
+                                                    <div class="cosB">
+                                                       {{ article.article_time }}-{{ article.article_date }}
+                                                    </div>
+                                                    <div class="cosA">
+
+                                                        <span>
+                                                            <div>
+                                                                <span class="label label-info">标题</span>{{ article.name }}
+
+                                                                 </div>
+
+                                                                 <div>
+                                                                <a href="/BBS/chat?receiver={{ article.receiver }}" class="label label-warning">作者 </a>{{ article.article_author_name  }}
+                                                                </div>
+
+                                                                    <div>
+                                                                     {{ article.article_info }}
+                                                                 </div>
+                                                            <span >
+                                                                <a href="/BBS/articlechange?nid={{ article.id }}" class="label label-success">
+                                                                    更多 <i class="fa fa-forward"></i>
+                                                                </a>
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                                </li>
+                                                {% endfor %}
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="am-tab-panel am-fade" id="tab2">
+                                    <div id="wrapperB" class="wrapper">
+                                        <div id="scroller" class="scroller">
+                                            <ul class="tpl-task-list tpl-task-remind">
+
+
+
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            -->
+            </div>
+
+
+
+        </div>
+
+    <script>
+        function search(){
+    var $keyword = $("#keyword").val();
+
+    window.location.href = "/BBS/home/?keyword="+$keyword;
+}
+        function entersearch(){
+    var event = window.event || arguments.callee.caller.arguments[0];
+    if (event.keyCode == 13)
+       {
+          search();
+       }
+}
+    </script>
+
+    <script src="/static/home/js/jquery.min.js"></script>
+    <script src="/static/home/js/amazeui.min.js"></script>
+    <script src="/static/home/js/iscroll.js"></script>
+    <script src="/static/home/js/app.js"></script>
+</body>
+
+</html>
